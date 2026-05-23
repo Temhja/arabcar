@@ -131,20 +131,22 @@
   100% { transform: scale(1.1); opacity: 0;   }
 }
 
-/* Collapsed on mobile (icon only) */
-@media (max-width: 480px) {
+/* Mobile: icon-only circle, proper position, no overlap */
+@media (max-width: 767px) {
   .whatsapp-fab {
-    padding: 14px;
+    bottom: 18px;
+    right: 14px;
+    width: 52px;
+    height: 52px;
+    padding: 0;
     border-radius: 50%;
-    bottom: 20px;
-    right: 16px;
     gap: 0;
-    width: 56px;
-    height: 56px;
     justify-content: center;
+    align-items: center;
   }
+  .whatsapp-fab svg { width: 26px; height: 26px; }
   .whatsapp-fab__text { display: none; }
-  .back-to-top { right: 80px; bottom: 20px; }
+  .whatsapp-fab::before { border-radius: 50%; }
 }
 
 /* ── Inline section WhatsApp button ── */
