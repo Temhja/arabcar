@@ -1,0 +1,102 @@
+/* ============================================================
+   responsive.css — Mobile-First Breakpoints
+   ============================================================ */
+
+/* ── Tablet (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .booking-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .booking-form__submit {
+    grid-column: span 2;
+    width: 100%;
+  }
+  .car-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+  .locations__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .contact__grid {
+    gap: var(--space-lg);
+  }
+}
+
+/* ── Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+  /* Nav */
+  .nav          { display: none; }
+  .header__cta  { display: none; }
+  .hamburger    { display: flex; }
+  .lang-switcher { margin-left: auto; margin-right: var(--space-sm); }
+
+  /* Hero */
+  .hero__title  { font-size: clamp(2.8rem, 14vw, 4rem); }
+  .hero__stats  { gap: var(--space-lg); }
+  .hero__actions { flex-direction: column; }
+  .hero__actions .btn { width: 100%; text-align: center; }
+
+  /* Booking */
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+  .booking-form__submit {
+    grid-column: span 1;
+  }
+
+  /* Fleet controls */
+  .fleet__controls { flex-direction: column; align-items: stretch; }
+  .search-box { width: 100%; }
+  .filter-pills { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
+  .filter-pills::-webkit-scrollbar { display: none; }
+
+  /* Car grid */
+  .car-grid { grid-template-columns: 1fr; }
+
+  /* Steps */
+  .steps { flex-direction: column; align-items: center; }
+
+  /* Locations */
+  .locations__grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Contact */
+  .contact__grid { grid-template-columns: 1fr; gap: var(--space-xl); }
+
+  /* Footer */
+  .footer__grid { grid-template-columns: 1fr; gap: var(--space-xl); }
+  .footer__bottom { flex-direction: column; text-align: center; }
+
+  /* Sections spacing */
+  section { padding: var(--space-xl) 0; }
+  .container { padding: 0 var(--space-md); }
+
+  /* Back to top */
+  .back-to-top { bottom: 20px; right: 20px; }
+}
+
+/* ── Small Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  .hero__title  { font-size: clamp(2.2rem, 12vw, 3rem); }
+  .section-title{ font-size: clamp(1.8rem, 8vw, 2.5rem); }
+  .locations__grid { grid-template-columns: 1fr 1fr; }
+  .testimonial  { flex: 0 0 90vw; }
+}
+
+/* ── Touch devices ── */
+@media (hover: none) {
+  .car-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-card);
+  }
+  .btn:hover { transform: none; }
+}
+
+/* ── Print ── */
+@media print {
+  .header, .hero, .loader, .back-to-top { display: none; }
+  body { background: white; color: black; }
+}

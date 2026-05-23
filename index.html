@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArabCar – Premium Car Rental in Germany</title>
+  <meta name="description" content="ArabCar – Premium car rental in Germany for Gulf Arab travelers. Book luxury, SUV, and economy cars across Germany." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/rtl.css" />
+</head>
+<body class="lang-en" data-lang="en">
+
+  <!-- ============================================================
+       LOADING SCREEN
+       ============================================================ -->
+  <div class="loader" id="loader">
+    <div class="loader__logo">
+      <!-- NOTE: Replace with your actual logo SVG or <img src="images/logo.svg"> -->
+       <img src="images/logo.svg">
+      <!-- <span class="loader__car">CAR</span>
+      <span class="loader__brand">ARAB</span> -->
+    </div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <!-- ============================================================
+       HEADER / NAV
+       ============================================================ -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+
+      <!-- Logo -->
+      <!-- NOTE: Place your logo file at images/logo.png (or .svg) and update src -->
+      <a href="#" class="header__logo">
+        <img src="images/logo.svg" alt="ArabCar Logo" class="header__logo-img"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="header__logo-fallback">
+          <span class="logo-arab">ARAB</span><span class="logo-car">CAR</span>
+        </span>
+      </a>
+
+      <!-- Language Switcher -->
+      <nav class="lang-switcher" aria-label="Language">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ar">عر</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+      </nav>
+
+      <!-- Desktop Nav -->
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#fleet" class="nav__link" data-i18n="nav_fleet">Fleet</a>
+        <a href="#how" class="nav__link" data-i18n="nav_how">How it Works</a>
+        <a href="#locations" class="nav__link" data-i18n="nav_locations">Locations</a>
+        <a href="#contact" class="nav__link" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="#booking" class="btn btn--primary header__cta" data-i18n="nav_book">Book Now</a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav>
+        <a href="#fleet" class="mobile-menu__link" data-i18n="nav_fleet">Fleet</a>
+        <a href="#how" class="mobile-menu__link" data-i18n="nav_how">How it Works</a>
+        <a href="#locations" class="mobile-menu__link" data-i18n="nav_locations">Locations</a>
+        <a href="#contact" class="mobile-menu__link" data-i18n="nav_contact">Contact</a>
+        <a href="#booking" class="btn btn--primary" data-i18n="nav_book">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <!-- NOTE: Replace hero__bg-img src with your hero car image, e.g. images/hero-car.png -->
+      <img src="images/hero-car.png" alt="" class="hero__bg-img" aria-hidden="true"
+           onerror="this.style.opacity='0'" />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__content container">
+      <div class="hero__text reveal">
+        <p class="hero__eyebrow" data-i18n="hero_eyebrow">Premium Rentals · Germany</p>
+        <h1 class="hero__title">
+          <span data-i18n="hero_title_1">Drive Germany</span><br />
+          <em data-i18n="hero_title_2">Your Way</em>
+        </h1>
+        <p class="hero__sub" data-i18n="hero_sub">
+          Luxury, SUV &amp; economy cars across Germany — Arabic support, transparent pricing, zero hidden fees.
+        </p>
+        <div class="hero__actions">
+          <a href="#booking" class="btn btn--primary btn--lg" data-i18n="hero_cta1">Reserve a Car</a>
+          <a href="#fleet" class="btn btn--ghost btn--lg" data-i18n="hero_cta2">See Fleet</a>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="hero__stats reveal reveal--delay">
+        <div class="stat">
+          <span class="stat__num" data-count="32">0</span><span class="stat__plus">+</span>
+          <span class="stat__label" data-i18n="stat_cars">Car Models</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="8">0</span>
+          <span class="stat__label" data-i18n="stat_cities">Cities</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="99">0</span><span class="stat__plus">%</span>
+          <span class="stat__label" data-i18n="stat_happy">Happy Clients</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BOOKING BAR
+       ============================================================ -->
+  <section class="booking-bar" id="booking">
+    <div class="container">
+      <form class="booking-form" id="bookingForm" novalidate>
+        <div class="booking-form__field">
+          <label data-i18n="book_pickup">Pick-up Location</label>
+          <!-- NOTE: Add more German city options as needed -->
+          <select name="pickup" required>
+            <option value="">-- Select City --</option>
+            <option value="munich">Munich Airport (MUC)</option>
+            <option value="frankfurt">Frankfurt Airport (FRA)</option>
+            <option value="berlin">Berlin (TXL)</option>
+            <option value="hamburg">Hamburg Airport (HAM)</option>
+            <option value="dusseldorf">Düsseldorf Airport (DUS)</option>
+            <option value="cologne">Cologne (CGN)</option>
+            <option value="stuttgart">Stuttgart (STR)</option>
+            <option value="dortmund">Dortmund</option>
+          </select>
+        </div>
+        <div class="booking-form__field">
+          <label data-i18n="book_dropoff">Drop-off Location</label>
+          <select name="dropoff">
+            <option value="same" data-i18n="book_same">Same as Pick-up</option>
+            <option value="munich">Munich Airport (MUC)</option>
+            <option value="frankfurt">Frankfurt Airport (FRA)</option>
+            <option value="berlin">Berlin (TXL)</option>
+            <option value="hamburg">Hamburg Airport (HAM)</option>
+            <option value="dusseldorf">Düsseldorf Airport (DUS)</option>
+          </select>
+        </div>
+        <div class="booking-form__field">
+          <label data-i18n="book_from">Pick-up Date</label>
+          <input type="date" name="dateFrom" required />
+        </div>
+        <div class="booking-form__field">
+          <label data-i18n="book_to">Return Date</label>
+          <input type="date" name="dateTo" required />
+        </div>
+        <button type="submit" class="btn btn--primary booking-form__submit" data-i18n="book_search">
+          Search Cars
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FLEET SECTION
+       ============================================================ -->
+  <section class="fleet" id="fleet">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow" data-i18n="fleet_eyebrow">Our Vehicles</p>
+        <h2 class="section-title" data-i18n="fleet_title">Choose Your Ride</h2>
+        <p class="section-sub" data-i18n="fleet_sub">From compact to luxury — every car is inspected, insured &amp; ready for German roads.</p>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="fleet__controls reveal">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" id="carSearch" placeholder="Search cars…" data-i18n-placeholder="search_placeholder" />
+        </div>
+        <div class="filter-pills" id="filterPills">
+          <button class="pill active" data-filter="all" data-i18n="filter_all">All</button>
+          <button class="pill" data-filter="suv" data-i18n="filter_suv">SUV</button>
+          <button class="pill" data-filter="luxury" data-i18n="filter_luxury">Luxury</button>
+          <button class="pill" data-filter="sedan" data-i18n="filter_sedan">Sedan</button>
+          <button class="pill" data-filter="coupe" data-i18n="filter_coupe">Coupé</button>
+          <button class="pill" data-filter="economy" data-i18n="filter_economy">Economy</button>
+          <button class="pill" data-filter="electric" data-i18n="filter_electric">Electric</button>
+        </div>
+        <div class="sort-box">
+          <select id="sortSelect">
+            <option value="popular" data-i18n="sort_popular">Most Popular</option>
+            <option value="price_asc" data-i18n="sort_price_asc">Price ↑</option>
+            <option value="price_desc" data-i18n="sort_price_desc">Price ↓</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Price Range Slider -->
+      <div class="price-filter reveal">
+        <label data-i18n="price_range">Price Range: </label>
+        <span class="price-filter__val" id="priceLabel">€50 – €200 / day</span>
+        <div class="range-track">
+          <input type="range" id="priceMin" min="30" max="500" value="50" step="10" />
+          <input type="range" id="priceMax" min="30" max="500" value="200" step="10" />
+        </div>
+      </div>
+
+      <!-- Car Grid -->
+      <!-- NOTE: Each .car-card has data-category and data-price attributes for filtering.
+                 Replace placeholder images with real photos in the images/ folder.
+                 Naming suggestion: images/bmw-m440.jpg, images/vw-t-roc.jpg, etc.
+                 data-price = price per day in EUR (integer). -->
+      <div class="car-grid" id="carGrid">
+
+        <!-- Card Template — duplicate and edit for each car -->
+        <article class="car-card reveal" data-category="luxury coupe" data-price="160" data-name="BMW M440 Coupe">
+          <div class="car-card__badge">Advice of the Day</div>
+          <div class="car-card__img-wrap">
+            <!-- NOTE: Replace with actual image path -->
+            <img src="images/bmw-m440.jpg" alt="BMW M440 Coupe" loading="lazy"
+                 onerror="this.src='images/placeholder.jpg'" />
+          </div>
+          <div class="car-card__info">
+            <h3 class="car-card__name">BMW M440 Coupe</h3>
+            <p class="car-card__sub">Or similar Coupé</p>
+            <ul class="car-card__specs">
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 1 1 0 10A5 5 0 0 1 12 2zm0 12c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z"/></svg> 2</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 6H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 10H4V8h16v8z"/></svg> 1</li>
+              <li>⚙ Auto</li>
+            </ul>
+            <div class="car-card__price">
+              <span class="price-main">€159</span>
+              <span class="price-decimals">.99</span>
+              <span class="price-unit">/day</span>
+            </div>
+            <p class="car-card__total">€1,427.84 total · 900 km included</p>
+            <a href="#booking" class="btn btn--primary btn--sm" data-i18n="card_book">Book This Car</a>
+          </div>
+        </article>
+
+        <article class="car-card reveal" data-category="suv" data-price="59" data-name="VW T-Roc">
+          <div class="car-card__badge car-card__badge--deal">Early Bird Special</div>
+          <div class="car-card__img-wrap">
+            <img src="images/vw-troc.jpg" alt="VW T-Roc" loading="lazy"
+                 onerror="this.src='images/placeholder.jpg'" />
+          </div>
+          <div class="car-card__info">
+            <h3 class="car-card__name">VW T-Roc</h3>
+            <p class="car-card__sub">Or similar SUV</p>
+            <ul class="car-card__specs">
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 1 1 0 10A5 5 0 0 1 12 2zm0 12c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z"/></svg> 5</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 6H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 10H4V8h16v8z"/></svg> 3</li>
+              <li>⚙ Manual</li>
+            </ul>
+            <div class="car-card__price">
+              <span class="price-main">€58</span>
+              <span class="price-decimals">.74</span>
+              <span class="price-unit">/day</span>
+            </div>
+            <p class="car-card__total">€712.84 total · 2,200 km included</p>
+            <a href="#booking" class="btn btn--primary btn--sm" data-i18n="card_book">Book This Car</a>
+          </div>
+        </article>
+
+        <article class="car-card reveal" data-category="suv" data-price="71" data-name="BMW X3 30">
+          <div class="car-card__badge car-card__badge--deal">Early Bird Special</div>
+          <div class="car-card__img-wrap">
+            <img src="images/bmw-x3.jpg" alt="BMW X3 30" loading="lazy"
+                 onerror="this.src='images/placeholder.jpg'" />
+          </div>
+          <div class="car-card__info">
+            <h3 class="car-card__name">BMW X3 30</h3>
+            <p class="car-card__sub">Or similar SUV</p>
+            <ul class="car-card__specs">
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 1 1 0 10A5 5 0 0 1 12 2zm0 12c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z"/></svg> 5</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 6H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 10H4V8h16v8z"/></svg> 5</li>
+              <li>⚙ Auto</li>
+            </ul>
+            <div class="car-card__price">
+              <span class="price-main">€70</span>
+              <span class="price-decimals">.80</span>
+              <span class="price-unit">/day</span>
+            </div>
+            <p class="car-card__total">€1,002.29 total · 1,200 km included</p>
+            <a href="#booking" class="btn btn--primary btn--sm" data-i18n="card_book">Book This Car</a>
+          </div>
+        </article>
+
+        <article class="car-card reveal" data-category="sedan" data-price="85" data-name="BMW 520">
+          <div class="car-card__badge">Advice of the Day</div>
+          <div class="car-card__img-wrap">
+            <img src="images/bmw-520.jpg" alt="BMW 520" loading="lazy"
+                 onerror="this.src='images/placeholder.jpg'" />
+          </div>
+          <div class="car-card__info">
+            <h3 class="car-card__name">BMW 520</h3>
+            <p class="car-card__sub">Or similar Sedan</p>
+            <ul class="car-card__specs">
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 1 1 0 10A5 5 0 0 1 12 2zm0 12c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z"/></svg> 5</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 6H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 10H4V8h16v8z"/></svg> 4</li>
+              <li>⚙ Auto</li>
+            </ul>
+            <div class="car-card__price">
+              <span class="price-main">€85</span>
+              <span class="price-decimals">.00</span>
+              <span class="price-unit">/day</span>
+            </div>
+            <p class="car-card__total">€1,190.00 total · 1,400 km included</p>
+            <a href="#booking" class="btn btn--primary btn--sm" data-i18n="card_book">Book This Car</a>
+          </div>
+        </article>
+
+        <article class="car-card reveal" data-category="luxury suv" data-price="195" data-name="Mercedes-AMG GT 63 S">
+          <div class="car-card__badge car-card__badge--deal">Early Bird Special</div>
+          <div class="car-card__img-wrap">
+            <img src="images/mercedes-amg-gt63s.jpg" alt="Mercedes-AMG GT 63 S" loading="lazy"
+                 onerror="this.src='images/placeholder.jpg'" />
+          </div>
+          <div class="car-card__info">
+            <h3 class="car-card__name">Mercedes-AMG GT 63 S</h3>
+            <p class="car-card__sub">Or similar SUV</p>
+            <ul class="car-card__specs">
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 1 1 0 10A5 5 0 0 1 12 2zm0 12c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z"/></svg> 5</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 6H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 10H4V8h16v8z"/></svg> 3</li>
+              <li>⚙ Auto</li>
+            </ul>
+            <div class="car-card__price">
+              <span class="price-main">€195</span>
+              <span class="price-decimals">.00</span>
+              <span class="price-unit">/day</span>
+            </div>
+            <p class="car-card__total">€2,730.00 total · 1,000 km included</p>
+            <a href="#booking" class="btn btn--primary btn--sm" data-i18n="card_book">Book This Car</a>
+          </div>
+        </article>
+
+        <article class="car-card reveal" data-category="electric" data-price="95" data-name="Tesla Model 3">
+          <div class="car-card__badge car-card__badge--electric">⚡ Electric</div>
+          <div class="car-card__img-wrap">
+            <img src="images/tesla-model3.jpg" alt="Tesla Model 3" loading="lazy"
+                 onerror="this.src='images/placeholder.jpg'" />
+          </div>
+          <div class="car-card__info">
+            <h3 class="car-card__name">Tesla Model 3</h3>
+            <p class="car-card__sub">Or similar Electric Sedan</p>
+            <ul class="car-card__specs">
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 1 1 0 10A5 5 0 0 1 12 2zm0 12c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z"/></svg> 5</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 6H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 10H4V8h16v8z"/></svg> 3</li>
+              <li>⚡ Auto</li>
+            </ul>
+            <div class="car-card__price">
+              <span class="price-main">€95</span>
+              <span class="price-decimals">.00</span>
+              <span class="price-unit">/day</span>
+            </div>
+            <p class="car-card__total">€1,330.00 total · 500 km included</p>
+            <a href="#booking" class="btn btn--primary btn--sm" data-i18n="card_book">Book This Car</a>
+          </div>
+        </article>
+
+        <!-- NOTE: Add more car cards here following the same pattern.
+             Suggested image names: porsche-cayenne.jpg, audi-q7.jpg, mercedes-e220.jpg, etc. -->
+
+      </div>
+
+      <!-- No results message -->
+      <p class="no-results" id="noResults" style="display:none" data-i18n="no_results">No cars found. Try adjusting filters.</p>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW IT WORKS
+       ============================================================ -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow" data-i18n="how_eyebrow">Simple Process</p>
+        <h2 class="section-title" data-i18n="how_title">Book in 3 Steps</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step__num">01</div>
+          <div class="step__icon">🔍</div>
+          <h3 data-i18n="step1_title">Search</h3>
+          <p data-i18n="step1_desc">Enter your city, dates, and preferred car type to see available vehicles.</p>
+        </div>
+        <div class="step__connector" aria-hidden="true"></div>
+        <div class="step reveal reveal--delay">
+          <div class="step__num">02</div>
+          <div class="step__icon">✅</div>
+          <h3 data-i18n="step2_title">Choose</h3>
+          <p data-i18n="step2_desc">Pick your car and any add-ons. Full price shown — no hidden fees.</p>
+        </div>
+        <div class="step__connector" aria-hidden="true"></div>
+        <div class="step reveal reveal--delay-2">
+          <div class="step__num">03</div>
+          <div class="step__icon">🚗</div>
+          <h3 data-i18n="step3_title">Drive</h3>
+          <p data-i18n="step3_desc">Pick up your car at the agreed location. Documents in English &amp; Arabic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LOCATIONS
+       ============================================================ -->
+  <section class="locations" id="locations">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow" data-i18n="loc_eyebrow">We're Everywhere</p>
+        <h2 class="section-title" data-i18n="loc_title">Our Locations</h2>
+        <p class="section-sub" data-i18n="loc_sub">Pick up and drop off at major German airports and city centers.</p>
+      </div>
+      <div class="locations__grid reveal">
+        <!-- NOTE: Add real Google Maps links or replace with your map embed -->
+        <div class="location-card">
+          <span class="location-card__icon">✈️</span>
+          <h4>Munich (MUC)</h4>
+          <p data-i18n="loc_airport">Airport Terminal 1 &amp; 2</p>
+        </div>
+        <div class="location-card">
+          <span class="location-card__icon">✈️</span>
+          <h4>Frankfurt (FRA)</h4>
+          <p data-i18n="loc_airport">Airport Terminal 1 &amp; 2</p>
+        </div>
+        <div class="location-card">
+          <span class="location-card__icon">✈️</span>
+          <h4>Berlin (BER)</h4>
+          <p data-i18n="loc_airport">Brandenburg Airport</p>
+        </div>
+        <div class="location-card">
+          <span class="location-card__icon">✈️</span>
+          <h4>Hamburg (HAM)</h4>
+          <p data-i18n="loc_airport">Hamburg Airport</p>
+        </div>
+        <div class="location-card">
+          <span class="location-card__icon">✈️</span>
+          <h4>Düsseldorf (DUS)</h4>
+          <p data-i18n="loc_airport">Düsseldorf Airport</p>
+        </div>
+        <div class="location-card">
+          <span class="location-card__icon">🏙️</span>
+          <h4>Stuttgart (STR)</h4>
+          <p data-i18n="loc_airport">Stuttgart Airport</p>
+        </div>
+        <div class="location-card">
+          <span class="location-card__icon">🏙️</span>
+          <h4>Cologne (CGN)</h4>
+          <p data-i18n="loc_airport">Cologne Bonn Airport</p>
+        </div>
+        <div class="location-card">
+          <span class="location-card__icon">🏙️</span>
+          <h4>Dortmund</h4>
+          <p data-i18n="loc_city">City Center</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+       ============================================================ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow" data-i18n="test_eyebrow">What Clients Say</p>
+        <h2 class="section-title" data-i18n="test_title">Trusted by Gulf Travelers</h2>
+      </div>
+      <div class="testimonials__track" id="testimonialsTrack">
+        <!-- NOTE: Add real client testimonials here -->
+        <div class="testimonial">
+          <p class="testimonial__text" data-i18n="test1_text">"Exceptional service. The car was spotless and the Arabic-language support made everything stress-free."</p>
+          <p class="testimonial__author">— Ahmed K., Kuwait City</p>
+          <div class="testimonial__stars">★★★★★</div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text" data-i18n="test2_text">"Best car rental experience in Germany. Fast booking, no surprises at pick-up."</p>
+          <p class="testimonial__author">— Sara M., Dubai</p>
+          <div class="testimonial__stars">★★★★★</div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text" data-i18n="test3_text">"Rented a BMW X3 for two weeks. Perfect condition, great price. Will use again next summer."</p>
+          <p class="testimonial__author">— Khalid A., Riyadh</p>
+          <div class="testimonial__stars">★★★★★</div>
+        </div>
+      </div>
+      <div class="testimonials__dots" id="testDots"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow" data-i18n="contact_eyebrow">Get in Touch</p>
+        <h2 class="section-title" data-i18n="contact_title">We Speak Arabic 🇩🇪🇸🇦</h2>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <div class="contact__item">
+            <span>📞</span>
+            <!-- NOTE: Replace with your real phone number -->
+            <a href="tel:+4915123456789">+49 151 234 56789</a>
+          </div>
+          <div class="contact__item">
+            <span>✉️</span>
+            <!-- NOTE: Replace with your real email -->
+            <a href="mailto:info@arabcar.de">info@arabcar.de</a>
+          </div>
+          <div class="contact__item">
+            <!-- NOTE: Replace with your real WhatsApp number -->
+            <span>💬</span>
+            <a href="https://wa.me/4915123456789" target="_blank" rel="noopener" data-i18n="contact_whatsapp">WhatsApp Us</a>
+          </div>
+          <div class="contact__item">
+            <span>🕐</span>
+            <span data-i18n="contact_hours">Mon–Sun, 07:00–22:00 CET</span>
+          </div>
+        </div>
+        <form class="contact__form reveal reveal--delay" id="contactForm" novalidate>
+          <input type="text" name="name" placeholder="Your Name" data-i18n-placeholder="form_name" required />
+          <input type="email" name="email" placeholder="Email Address" data-i18n-placeholder="form_email" required />
+          <!-- NOTE: Add a tel input for WhatsApp number if needed -->
+          <select name="lang_pref">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+          </select>
+          <textarea name="message" rows="4" placeholder="How can we help you?" data-i18n-placeholder="form_msg" required></textarea>
+          <button type="submit" class="btn btn--primary" data-i18n="form_send">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="header__logo">
+            <img src="images/logo.svg" alt="ArabCar Logo" style="height:40px;"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <span class="header__logo-fallback">
+              <span class="logo-arab">ARAB</span><span class="logo-car">CAR</span>
+            </span>
+          </a>
+          <p class="footer__tagline" data-i18n="footer_tag">Premium German Cars for Gulf Travelers.</p>
+          <!-- NOTE: Add real social links below -->
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="#" aria-label="X / Twitter" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <h5 data-i18n="footer_quick">Quick Links</h5>
+          <a href="#fleet" data-i18n="nav_fleet">Fleet</a>
+          <a href="#how" data-i18n="nav_how">How it Works</a>
+          <a href="#locations" data-i18n="nav_locations">Locations</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
+        </div>
+        <div class="footer__links">
+          <h5 data-i18n="footer_legal">Legal</h5>
+          <!-- NOTE: Create these pages or link to your legal documents -->
+          <a href="legal/impressum.html" data-i18n="footer_impressum">Impressum</a>
+          <a href="legal/datenschutz.html" data-i18n="footer_privacy">Privacy Policy</a>
+          <a href="legal/agb.html" data-i18n="footer_terms">Terms &amp; Conditions</a>
+        </div>
+        <div class="footer__newsletter">
+          <h5 data-i18n="footer_news">Newsletter</h5>
+          <p data-i18n="footer_news_sub">Get exclusive deals for Gulf travelers.</p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input type="email" placeholder="your@email.com" required />
+            <button type="submit" class="btn btn--primary btn--sm" data-i18n="footer_subscribe">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> ArabCar GmbH · All rights reserved</p>
+        <p data-i18n="footer_made">Made with ❤️ for Gulf travelers in Germany</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script src="js/i18n.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

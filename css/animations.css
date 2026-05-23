@@ -1,0 +1,111 @@
+/* ============================================================
+   animations.css — Keyframes & Scroll-Reveal
+   ============================================================ */
+
+/* ── Keyframes ── */
+@keyframes scrollDot {
+  0%   { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(16px); }
+}
+@keyframes logoPulse {
+  from { opacity: 0.7; }
+  to   { opacity: 1; }
+}
+@keyframes loaderProgress {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal--delay  { transition-delay: 0.15s; }
+.reveal--delay-2{ transition-delay: 0.3s; }
+.reveal--delay-3{ transition-delay: 0.45s; }
+
+/* ── Skeleton loading for car images ── */
+.car-card__img-wrap.loading {
+  background: linear-gradient(90deg, var(--clr-surface) 25%, var(--clr-surface-2) 50%, var(--clr-surface) 75%);
+  background-size: 400px 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+/* ── Hero title animated words ── */
+.hero__title span {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-back) forwards;
+}
+.hero__title span:nth-child(1) { animation-delay: 0.3s; }
+.hero__title span:nth-child(2) { animation-delay: 0.5s; }
+
+/* ── Number counter ── */
+.stat__num { transition: color var(--dur-base); }
+
+/* ── Pill hover ripple ── */
+.pill {
+  position: relative;
+  overflow: hidden;
+}
+.pill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(245,166,35,0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--dur-fast);
+}
+.pill:hover::after { opacity: 1; }
+
+/* ── Card entrance ── */
+.car-card {
+  animation: scaleIn 0.4s var(--ease-back) forwards;
+}
+.car-card.hidden {
+  display: none;
+}
+
+/* ── Gradient animated headline ── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--clr-primary), #fff, var(--clr-primary));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* ── Page transition ── */
+body.page-loading * { pointer-events: none; }

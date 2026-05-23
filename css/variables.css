@@ -1,0 +1,53 @@
+/* ============================================================
+   variables.css — Design Tokens
+   Brand: ArabCar
+   Primary:  #F5A623 (amber/orange from logo)
+   Dark:     #1A1A1A
+   Mid:      #2B2B2B
+   ============================================================ */
+:root {
+  /* ── Brand Colors ── */
+  --clr-primary:       #F5A623;   /* amber orange */
+  --clr-primary-dark:  #D4891A;
+  --clr-primary-light: #FFD07B;
+  --clr-black:         #0F0F0F;
+  --clr-dark:          #1A1A1A;
+  --clr-mid:           #2B2B2B;
+  --clr-surface:       #222222;
+  --clr-surface-2:     #2E2E2E;
+  --clr-border:        rgba(255,255,255,0.08);
+  --clr-white:         #FFFFFF;
+  --clr-text:          #E8E8E8;
+  --clr-text-muted:    #8A8A8A;
+  --clr-deal:          #22C55E;    /* green badge */
+  --clr-electric:      #3B82F6;   /* blue electric */
+
+  /* ── Typography ── */
+  --font-display: 'Bebas Neue', 'Tajawal', cursive;
+  --font-body:    'DM Sans', 'Tajawal', sans-serif;
+  --font-arabic:  'Tajawal', sans-serif;
+
+  /* ── Sizes ── */
+  --radius:    12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ── Spacing ── */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  32px;
+  --space-xl:  64px;
+  --space-2xl: 96px;
+
+  /* ── Shadows ── */
+  --shadow-card: 0 8px 40px rgba(0,0,0,0.45);
+  --shadow-glow: 0 0 30px rgba(245,166,35,0.25);
+
+  /* ── Transitions ── */
+  --ease:      cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:  150ms;
+  --dur-base:  300ms;
+  --dur-slow:  500ms;
+}

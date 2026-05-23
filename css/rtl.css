@@ -1,0 +1,84 @@
+/* ============================================================
+   rtl.css — Arabic (RTL) Direction Overrides
+   Applied when <html dir="rtl"> is set by i18n.js
+   ============================================================ */
+
+[dir="rtl"] body {
+  font-family: var(--font-arabic);
+  letter-spacing: 0; /* Arabic doesn't use letter-spacing */
+}
+
+/* Headers & Nav */
+[dir="rtl"] .header__inner { flex-direction: row-reverse; }
+[dir="rtl"] .nav { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .header__cta { margin-left: 0; margin-right: var(--space-md); }
+
+/* Mobile menu */
+[dir="rtl"] .mobile-menu { transform: translateX(100%); }
+[dir="rtl"] .mobile-menu.open { transform: translateX(0); }
+[dir="rtl"] .hamburger { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .lang-switcher { margin-left: 0; margin-right: auto; }
+
+/* Hero */
+[dir="rtl"] .hero__content { text-align: right; }
+[dir="rtl"] .hero__actions { flex-direction: row-reverse; }
+[dir="rtl"] .hero__stats   { flex-direction: row-reverse; }
+
+/* Fleet controls */
+[dir="rtl"] .fleet__controls { flex-direction: row-reverse; }
+[dir="rtl"] .filter-pills    { flex-direction: row-reverse; }
+[dir="rtl"] .search-box      { flex-direction: row-reverse; }
+
+/* Booking form */
+[dir="rtl"] .booking-form__field label { text-align: right; }
+[dir="rtl"] .booking-form__field select,
+[dir="rtl"] .booking-form__field input { text-align: right; direction: rtl; }
+
+/* Car cards */
+[dir="rtl"] .car-card__badge { left: auto; right: var(--space-md); }
+[dir="rtl"] .car-card__info  { text-align: right; }
+[dir="rtl"] .car-card__specs { flex-direction: row-reverse; }
+[dir="rtl"] .car-card__price { flex-direction: row-reverse; }
+
+/* Steps */
+[dir="rtl"] .steps { flex-direction: row-reverse; }
+[dir="rtl"] .step__connector {
+  background: linear-gradient(270deg, var(--clr-primary), transparent);
+}
+
+/* Locations */
+[dir="rtl"] .location-card { text-align: right; }
+
+/* Testimonials */
+[dir="rtl"] .testimonials__track { flex-direction: row-reverse; }
+
+/* Contact */
+[dir="rtl"] .contact__info  { text-align: right; }
+[dir="rtl"] .contact__item  { flex-direction: row-reverse; }
+[dir="rtl"] .contact__form input,
+[dir="rtl"] .contact__form textarea,
+[dir="rtl"] .contact__form select { text-align: right; direction: rtl; }
+
+/* Footer */
+[dir="rtl"] .footer__grid        { direction: rtl; }
+[dir="rtl"] .footer__links       { text-align: right; }
+[dir="rtl"] .footer__tagline     { text-align: right; }
+[dir="rtl"] .footer__bottom      { flex-direction: row-reverse; }
+[dir="rtl"] .newsletter-form     { flex-direction: row-reverse; }
+
+/* Section headers */
+[dir="rtl"] .section-header { direction: rtl; }
+
+/* Scroll connector direction */
+[dir="rtl"] .scroll-indicator { left: auto; right: 50%; transform: translateX(50%); }
+
+/* Arabic font sizing (Tajawal needs slight size bump for readability) */
+[dir="rtl"] p, [dir="rtl"] li, [dir="rtl"] label { font-size: 1.05em; }
+[dir="rtl"] .section-eyebrow { letter-spacing: 0.1em; }
+
+/* Back to top */
+[dir="rtl"] .back-to-top { right: auto; left: 32px; }
+@media (max-width: 768px) {
+  [dir="rtl"] .back-to-top { right: auto; left: 20px; }
+  [dir="rtl"] .lang-switcher { margin-left: 0; margin-right: var(--space-sm); }
+}
