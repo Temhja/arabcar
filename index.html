@@ -1,10 +1,192 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="ltr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ArabCar – Premium Car Rental in Germany</title>
-  <meta name="description" content="ArabCar – Premium car rental in Germany for Gulf Arab travelers. Book luxury, SUV, and economy cars across Germany." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       PRIMARY SEO — Arabic + European car rental keywords
+       ═══════════════════════════════════════════════════════ -->
+  <title>ArabCar | تأجير سيارات فاخرة في ألمانيا وأوروبا – Car Rental Germany for Arabs</title>
+  <meta name="description" content="ArabCar – أفضل شركة تأجير سيارات في ألمانيا وأوروبا للعرب. سيارات فاخرة، SUV، وسيارات اقتصادية في برلين، ميونخ، فرانكفورت، سويسرا، فرنسا وإيطاليا. خدمة عربية 100%. Book luxury cars in Germany, Switzerland, France & Italy — Arabic customer support." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.arabcar.de/" />
+
+  <!-- Hreflang for multilingual SEO -->
+  <link rel="alternate" hreflang="ar" href="https://www.arabcar.de/" />
+  <link rel="alternate" hreflang="de" href="https://www.arabcar.de/de/" />
+  <link rel="alternate" hreflang="en" href="https://www.arabcar.de/en/" />
+  <link rel="alternate" hreflang="fr" href="https://www.arabcar.de/fr/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.arabcar.de/" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       KEYWORDS — Arabic search terms + European market
+       ═══════════════════════════════════════════════════════ -->
+  <meta name="keywords" content="
+    تأجير سيارات ألمانيا, سيارات للإيجار ألمانيا, استئجار سيارة في ألمانيا,
+    تأجير سيارات فاخرة في ألمانيا, سيارات فاخرة للإيجار, ايجار سيارات للعرب,
+    تأجير سيارات ميونخ, تأجير سيارات برلين, تأجير سيارات فرانكفورت,
+    تأجير سيارات هامبورغ, سيارة مع سائق في ألمانيا,
+    تأجير سيارات سويسرا للعرب, تأجير سيارات فرنسا للعرب,
+    تأجير سيارات إيطاليا للعرب, استئجار سيارة في أوروبا,
+    سيارات مرسيدس للإيجار, BMW للإيجار, سيارة SUV للإيجار في أوروبا,
+    شركة تأجير سيارات عربية, تأجير سيارات للخليجيين, تأجير للسعوديين,
+    تأجير للإماراتيين, سيارة اقتصادية في ألمانيا,
+    car rental Germany Arabs, Mietwagen Deutschland Araber,
+    luxury car hire Germany, SUV rental Munich Frankfurt Berlin,
+    car rental Switzerland France Italy, Arabic car rental Europe,
+    ArabCar Germany, تأجير سيارة ألمانيا بدون كفيل,
+    ايجار سيارات مطار ميونخ, مطار فرانكفورت, مطار برلين
+  " />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="author" content="ArabCar GmbH" />
+  <meta name="geo.region" content="DE" />
+  <meta name="geo.placename" content="Germany" />
+  <meta name="language" content="Arabic, German, English, French" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       OPEN GRAPH — Social sharing (Arabic + English)
+       ═══════════════════════════════════════════════════════ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ArabCar" />
+  <meta property="og:url" content="https://www.arabcar.de/" />
+  <meta property="og:title" content="ArabCar | تأجير سيارات فاخرة في ألمانيا وأوروبا" />
+  <meta property="og:description" content="أفضل تجربة تأجير سيارات في ألمانيا، سويسرا، فرنسا وإيطاليا — بالعربية. Premium car rental across Europe with Arabic-speaking support." />
+  <meta property="og:image" content="https://www.arabcar.de/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ArabCar – تأجير سيارات فاخرة في أوروبا" />
+  <meta property="og:locale" content="ar_SA" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="en_GB" />
+
+  <!-- WhatsApp shares use og: tags -->
+  <meta property="og:phone_number" content="+4915123456789" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ArabCar | تأجير سيارات في ألمانيا وأوروبا للعرب" />
+  <meta name="twitter:description" content="سيارات فاخرة، SUV وسيارات اقتصادية في ألمانيا وأوروبا. خدمة عربية متميزة. احجز الآن!" />
+  <meta name="twitter:image" content="https://www.arabcar.de/images/og-cover.jpg" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       STRUCTURED DATA (Schema.org JSON-LD)
+       ═══════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AutoRental",
+        "@id": "https://www.arabcar.de/#business",
+        "name": "ArabCar GmbH",
+        "alternateName": ["ArabCar", "Arab Car Rental", "تأجير سيارات ألمانيا"],
+        "url": "https://www.arabcar.de",
+        "logo": "https://www.arabcar.de/images/logo.png",
+        "image": "https://www.arabcar.de/images/og-cover.jpg",
+        "description": "Premium car rental in Germany and Europe for Arabic-speaking travelers. Luxury, SUV and economy cars in Munich, Frankfurt, Berlin, Hamburg. Also serving Switzerland, France and Italy.",
+        "telephone": "+4915123456789",
+        "email": "info@arabcar.de",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DE",
+          "addressLocality": "Munich"
+        },
+        "areaServed": [
+          {"@type": "Country", "name": "Germany", "sameAs": "https://www.wikidata.org/wiki/Q183"},
+          {"@type": "Country", "name": "Switzerland", "sameAs": "https://www.wikidata.org/wiki/Q39"},
+          {"@type": "Country", "name": "France", "sameAs": "https://www.wikidata.org/wiki/Q142"},
+          {"@type": "Country", "name": "Italy", "sameAs": "https://www.wikidata.org/wiki/Q38"},
+          {"@type": "Country", "name": "Austria", "sameAs": "https://www.wikidata.org/wiki/Q40"}
+        ],
+        "priceRange": "€€",
+        "openingHours": "Mo-Su 07:00-22:00",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "telephone": "+4915123456789",
+            "availableLanguage": ["Arabic", "German", "English"],
+            "contactOption": "TollFree"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "reservations",
+            "telephone": "+4915123456789",
+            "availableLanguage": ["Arabic", "German", "English"]
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/arabcar.de",
+          "https://www.facebook.com/arabcarde"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "318",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "هل يمكنني استئجار سيارة في ألمانيا كسائح عربي؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "نعم، يمكنك استئجار سيارة في ألمانيا برخصة قيادة دولية أو رخصة من دول الخليج. ArabCar تقدم خدمة عربية كاملة وتقبل جوازات السفر الخليجية."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Arabs rent cars in Germany without a German license?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. An International Driving Permit (IDP) alongside your home-country license is accepted. Gulf country licenses are also accepted in most cases. ArabCar guides you through the process in Arabic."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "هل تعمل ArabCar في سويسرا وفرنسا وإيطاليا؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "نعم، نقدم خدمات تأجير السيارات في ألمانيا وسويسرا وفرنسا وإيطاليا والنمسا. يمكنك التواصل معنا عبر واتساب للحجز والاستفسار."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.arabcar.de/#website",
+        "url": "https://www.arabcar.de",
+        "name": "ArabCar – تأجير سيارات في أوروبا",
+        "inLanguage": ["ar", "de", "en"],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.arabcar.de/?search={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Theme color (browser UI) -->
+  <meta name="theme-color" content="#f5a623" />
+  <meta name="msapplication-TileColor" content="#0f0f0f" />
+
+  <!-- Apple PWA meta -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="ArabCar" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,14 +205,32 @@
 <body class="lang-en" data-lang="en">
 
   <!-- ============================================================
+       WHATSAPP FLOATING ACTION BUTTON (visible on all pages)
+       Replace +4915123456789 with your real WhatsApp number
+       ============================================================ -->
+  <a href="https://wa.me/4915123456789?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%A3%D8%AC%D9%8A%D8%B1%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20%D9%81%D9%8A%20%D8%A3%D9%88%D8%B1%D9%88%D8%A8%D8%A7"
+     class="whatsapp-fab"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp"
+     id="whatsappFab">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-fab__text">
+      واتساب
+      <span class="whatsapp-fab__label">Chat Now</span>
+    </span>
+  </a>
+
+  <!-- ============================================================
        LOADING SCREEN
        ============================================================ -->
   <div class="loader" id="loader">
     <div class="loader__logo">
       <!-- NOTE: Replace with your actual logo SVG or <img src="images/logo.svg"> -->
-       <img src="images/logo.svg">
-      <!-- <span class="loader__car">CAR</span>
-      <span class="loader__brand">ARAB</span> -->
+      <span class="loader__car">CAR</span>
+      <span class="loader__brand">ARAB</span>
     </div>
     <div class="loader__bar"><span></span></div>
   </div>
@@ -44,7 +244,7 @@
       <!-- Logo -->
       <!-- NOTE: Place your logo file at images/logo.png (or .svg) and update src -->
       <a href="#" class="header__logo">
-        <img src="images/logo.svg" alt="ArabCar Logo" class="header__logo-img"
+        <img src="images/logo.png" alt="ArabCar Logo" class="header__logo-img"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         <span class="header__logo-fallback">
           <span class="logo-arab">ARAB</span><span class="logo-car">CAR</span>
@@ -111,6 +311,11 @@
         <div class="hero__actions">
           <a href="#booking" class="btn btn--primary btn--lg" data-i18n="hero_cta1">Reserve a Car</a>
           <a href="#fleet" class="btn btn--ghost btn--lg" data-i18n="hero_cta2">See Fleet</a>
+          <a href="https://wa.me/4915123456789?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9"
+             class="whatsapp-section-btn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            احجز عبر واتساب
+          </a>
         </div>
       </div>
 
@@ -147,26 +352,58 @@
           <label data-i18n="book_pickup">Pick-up Location</label>
           <!-- NOTE: Add more German city options as needed -->
           <select name="pickup" required>
-            <option value="">-- Select City --</option>
-            <option value="munich">Munich Airport (MUC)</option>
-            <option value="frankfurt">Frankfurt Airport (FRA)</option>
-            <option value="berlin">Berlin (TXL)</option>
-            <option value="hamburg">Hamburg Airport (HAM)</option>
-            <option value="dusseldorf">Düsseldorf Airport (DUS)</option>
-            <option value="cologne">Cologne (CGN)</option>
-            <option value="stuttgart">Stuttgart (STR)</option>
-            <option value="dortmund">Dortmund</option>
+            <option value="">-- اختر المدينة / Select City --</option>
+            <optgroup label="🇩🇪 Deutschland – Germany">
+              <option value="munich">Munich Airport (MUC) – ميونخ</option>
+              <option value="frankfurt">Frankfurt Airport (FRA) – فرانكفورت</option>
+              <option value="berlin">Berlin Airport (BER) – برلين</option>
+              <option value="hamburg">Hamburg Airport (HAM) – هامبورغ</option>
+              <option value="dusseldorf">Düsseldorf Airport (DUS) – دوسلدورف</option>
+              <option value="cologne">Cologne/Bonn (CGN) – كولن</option>
+              <option value="stuttgart">Stuttgart (STR) – شتوتغارت</option>
+              <option value="nuremberg">Nuremberg (NUE) – نورنبرغ</option>
+            </optgroup>
+            <optgroup label="🇨🇭 Schweiz – Switzerland">
+              <option value="zurich">Zurich Airport (ZRH) – زيورخ</option>
+              <option value="geneva">Geneva Airport (GVA) – جنيف</option>
+              <option value="basel">Basel / Mulhouse (BSL) – بازل</option>
+            </optgroup>
+            <optgroup label="🇫🇷 France – فرنسا">
+              <option value="paris">Paris Charles de Gaulle (CDG) – باريس</option>
+              <option value="paris-orly">Paris Orly (ORY) – باريس أورلي</option>
+              <option value="nice">Nice Côte d'Azur (NCE) – نيس</option>
+              <option value="lyon">Lyon Airport (LYS) – ليون</option>
+            </optgroup>
+            <optgroup label="🇮🇹 Italia – إيطاليا">
+              <option value="milan">Milan Malpensa (MXP) – ميلانو</option>
+              <option value="rome">Rome Fiumicino (FCO) – روما</option>
+              <option value="venice">Venice Marco Polo (VCE) – البندقية</option>
+            </optgroup>
           </select>
         </div>
         <div class="booking-form__field">
           <label data-i18n="book_dropoff">Drop-off Location</label>
           <select name="dropoff">
             <option value="same" data-i18n="book_same">Same as Pick-up</option>
-            <option value="munich">Munich Airport (MUC)</option>
-            <option value="frankfurt">Frankfurt Airport (FRA)</option>
-            <option value="berlin">Berlin (TXL)</option>
-            <option value="hamburg">Hamburg Airport (HAM)</option>
-            <option value="dusseldorf">Düsseldorf Airport (DUS)</option>
+            <optgroup label="🇩🇪 Germany">
+              <option value="munich">Munich Airport (MUC)</option>
+              <option value="frankfurt">Frankfurt Airport (FRA)</option>
+              <option value="berlin">Berlin Airport (BER)</option>
+              <option value="hamburg">Hamburg (HAM)</option>
+              <option value="dusseldorf">Düsseldorf (DUS)</option>
+            </optgroup>
+            <optgroup label="🇨🇭 Switzerland">
+              <option value="zurich">Zurich (ZRH)</option>
+              <option value="geneva">Geneva (GVA)</option>
+            </optgroup>
+            <optgroup label="🇫🇷 France">
+              <option value="paris">Paris CDG</option>
+              <option value="nice">Nice (NCE)</option>
+            </optgroup>
+            <optgroup label="🇮🇹 Italy">
+              <option value="milan">Milan (MXP)</option>
+              <option value="rome">Rome (FCO)</option>
+            </optgroup>
           </select>
         </div>
         <div class="booking-form__field">
@@ -393,6 +630,17 @@
     </div>
   </section>
 
+
+  <!-- WhatsApp Strip (between sections) -->
+  <div class="whatsapp-strip">
+    <div class="container">
+      <div class="whatsapp-strip__inner">
+        <p>🇩🇪 <strong>خدمة عربية على مدار الساعة</strong> &mdash; Germany &bull; Switzerland &bull; France &bull; Italy</p>
+        <a href="https://wa.me/4915123456789?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%A3%D8%AC%D9%8A%D8%B1%20%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9" class="whatsapp-section-btn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>تحدث معنا الآن</a>
+      </div>
+    </div>
+  </div>
+
   <!-- ============================================================
        HOW IT WORKS
        ============================================================ -->
@@ -427,6 +675,17 @@
     </div>
   </section>
 
+
+  <!-- WhatsApp Strip (after how-it-works) -->
+  <div class="whatsapp-strip">
+    <div class="container">
+      <div class="whatsapp-strip__inner">
+        <p>📍 <strong>ألمانيا · سويسرا · فرنسا · إيطاليا</strong> &mdash; تغطية أوروبا الكاملة</p>
+        <a href="https://wa.me/4915123456789?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%A3%D8%AC%D9%8A%D8%B1%20%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9" class="whatsapp-section-btn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>احجز عبر واتساب</a>
+      </div>
+    </div>
+  </div>
+
   <!-- ============================================================
        LOCATIONS
        ============================================================ -->
@@ -438,46 +697,69 @@
         <p class="section-sub" data-i18n="loc_sub">Pick up and drop off at major German airports and city centers.</p>
       </div>
       <div class="locations__grid reveal">
-        <!-- NOTE: Add real Google Maps links or replace with your map embed -->
+        <!-- 🇩🇪 Germany -->
         <div class="location-card">
           <span class="location-card__icon">✈️</span>
           <h4>Munich (MUC)</h4>
-          <p data-i18n="loc_airport">Airport Terminal 1 &amp; 2</p>
+          <p>🇩🇪 Airport T1 &amp; T2 · ميونخ</p>
         </div>
         <div class="location-card">
           <span class="location-card__icon">✈️</span>
           <h4>Frankfurt (FRA)</h4>
-          <p data-i18n="loc_airport">Airport Terminal 1 &amp; 2</p>
+          <p>🇩🇪 Airport T1 &amp; T2 · فرانكفورت</p>
         </div>
         <div class="location-card">
           <span class="location-card__icon">✈️</span>
           <h4>Berlin (BER)</h4>
-          <p data-i18n="loc_airport">Brandenburg Airport</p>
+          <p>🇩🇪 Brandenburg Airport · برلين</p>
         </div>
         <div class="location-card">
           <span class="location-card__icon">✈️</span>
           <h4>Hamburg (HAM)</h4>
-          <p data-i18n="loc_airport">Hamburg Airport</p>
+          <p>🇩🇪 Hamburg Airport · هامبورغ</p>
         </div>
         <div class="location-card">
           <span class="location-card__icon">✈️</span>
           <h4>Düsseldorf (DUS)</h4>
-          <p data-i18n="loc_airport">Düsseldorf Airport</p>
+          <p>🇩🇪 Düsseldorf Airport · دوسلدورف</p>
         </div>
         <div class="location-card">
           <span class="location-card__icon">🏙️</span>
           <h4>Stuttgart (STR)</h4>
-          <p data-i18n="loc_airport">Stuttgart Airport</p>
+          <p>🇩🇪 Stuttgart Airport · شتوتغارت</p>
+        </div>
+        <!-- 🇨🇭 Switzerland -->
+        <div class="location-card">
+          <span class="location-card__icon">🏔️</span>
+          <h4>Zurich (ZRH)</h4>
+          <p>🇨🇭 Zurich Airport · زيورخ</p>
         </div>
         <div class="location-card">
-          <span class="location-card__icon">🏙️</span>
-          <h4>Cologne (CGN)</h4>
-          <p data-i18n="loc_airport">Cologne Bonn Airport</p>
+          <span class="location-card__icon">🕊️</span>
+          <h4>Geneva (GVA)</h4>
+          <p>🇨🇭 Geneva Airport · جنيف</p>
+        </div>
+        <!-- 🇫🇷 France -->
+        <div class="location-card">
+          <span class="location-card__icon">🗼</span>
+          <h4>Paris (CDG)</h4>
+          <p>🇫🇷 Charles de Gaulle · باريس</p>
         </div>
         <div class="location-card">
-          <span class="location-card__icon">🏙️</span>
-          <h4>Dortmund</h4>
-          <p data-i18n="loc_city">City Center</p>
+          <span class="location-card__icon">🌊</span>
+          <h4>Nice (NCE)</h4>
+          <p>🇫🇷 Côte d'Azur Airport · نيس</p>
+        </div>
+        <!-- 🇮🇹 Italy -->
+        <div class="location-card">
+          <span class="location-card__icon">🏛️</span>
+          <h4>Rome (FCO)</h4>
+          <p>🇮🇹 Fiumicino Airport · روما</p>
+        </div>
+        <div class="location-card">
+          <span class="location-card__icon">🎭</span>
+          <h4>Milan (MXP)</h4>
+          <p>🇮🇹 Malpensa Airport · ميلانو</p>
         </div>
       </div>
     </div>
@@ -562,6 +844,41 @@
   </section>
 
   <!-- ============================================================
+       SEO CONTENT BLOCK — rich Arabic + multilingual text for
+       search engine crawlers (visually hidden but accessible)
+       ============================================================ -->
+  <section class="seo-content" aria-label="معلومات الشركة" style="background:var(--clr-surface);padding:40px 0;border-top:1px solid var(--clr-border)">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;">
+        <div>
+          <h2 style="font-size:1.1rem;color:var(--clr-primary);margin-bottom:12px;font-family:var(--font-body)">تأجير سيارات في ألمانيا للعرب</h2>
+          <p style="font-size:0.85rem;color:var(--clr-text-muted);line-height:1.8">
+            ArabCar هي شركة تأجير سيارات متخصصة في خدمة المسافرين العرب في ألمانيا وأوروبا. نقدم سيارات فاخرة، SUV، وسيارات اقتصادية في برلين، ميونخ، فرانكفورت، هامبورغ، كولن وشتوتغارت. خدمة عربية 100٪ طوال أيام الأسبوع.
+          </p>
+        </div>
+        <div>
+          <h2 style="font-size:1.1rem;color:var(--clr-primary);margin-bottom:12px;font-family:var(--font-body)">تأجير سيارات سويسرا وفرنسا وإيطاليا</h2>
+          <p style="font-size:0.85rem;color:var(--clr-text-muted);line-height:1.8">
+            نوفر خدمات تأجير السيارات في سويسرا (زيورخ وجنيف)، فرنسا (باريس ونيس وليون)، وإيطاليا (روما وميلانو والبندقية). رحلة أوروبية كاملة بسيارة موثوقة وبدعم عربي متواصل.
+          </p>
+        </div>
+        <div>
+          <h2 style="font-size:1.1rem;color:var(--clr-primary);margin-bottom:12px;font-family:var(--font-body)">Car Rental Germany for Gulf Travelers</h2>
+          <p style="font-size:0.85rem;color:var(--clr-text-muted);line-height:1.8">
+            ArabCar specializes in car rental for Saudi, Emirati, Kuwaiti, Qatari, Bahraini and Omani travelers visiting Germany and Europe. Arabic-speaking staff, transparent pricing, and full insurance included. Book online or via WhatsApp.
+          </p>
+        </div>
+        <div>
+          <h2 style="font-size:1.1rem;color:var(--clr-primary);margin-bottom:12px;font-family:var(--font-body)">Mietwagen für arabische Reisende</h2>
+          <p style="font-size:0.85rem;color:var(--clr-text-muted);line-height:1.8">
+            ArabCar bietet Mietwagen in ganz Deutschland und Europa für arabischsprachige Reisende an. Verfügbar in München, Frankfurt, Berlin, Hamburg und weiteren Städten in der Schweiz, Frankreich und Italien.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        FOOTER
        ============================================================ -->
   <footer class="footer">
@@ -569,7 +886,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="#" class="header__logo">
-            <img src="images/logo.svg" alt="ArabCar Logo" style="height:40px;"
+            <img src="images/logo.png" alt="ArabCar Logo" style="height:40px;"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
             <span class="header__logo-fallback">
               <span class="logo-arab">ARAB</span><span class="logo-car">CAR</span>
