@@ -76,6 +76,27 @@
   transform: translateX(-50%) translateY(0);
 }
 
+/* ── WhatsApp card button ── */
+.btn--whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #fff !important;
+  border-radius: var(--radius-pill);
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}
+.btn--whatsapp:hover { background: #1ebe5d; transform: translateY(-1px); }
+
 /* ============================================================
    WhatsApp Floating Button & Section Buttons
    ============================================================ */
@@ -131,22 +152,23 @@
   100% { transform: scale(1.1); opacity: 0;   }
 }
 
-/* Mobile: icon-only circle, proper position, no overlap */
+/* Mobile: compact circle, bottom-right, never overlaps */
 @media (max-width: 767px) {
   .whatsapp-fab {
-    bottom: 18px;
-    right: 14px;
-    width: 52px;
-    height: 52px;
+    bottom: 16px;
+    right: 16px;
+    width: 54px;
+    height: 54px;
     padding: 0;
     border-radius: 50%;
     gap: 0;
     justify-content: center;
     align-items: center;
+    /* Label hidden — icon only on phones */
   }
-  .whatsapp-fab svg { width: 26px; height: 26px; }
+  .whatsapp-fab svg { width: 28px; height: 28px; }
   .whatsapp-fab__text { display: none; }
-  .whatsapp-fab::before { border-radius: 50%; }
+  .whatsapp-fab::before { border-radius: 50%; inset: -5px; }
 }
 
 /* ── Inline section WhatsApp button ── */

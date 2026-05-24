@@ -17,7 +17,7 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--space-lg);
+  padding: 0 clamp(16px, 4vw, 32px);
 }
 
 /* ── Section Headers ── */
@@ -52,7 +52,7 @@ body {
 
 /* ── Sections ── */
 section {
-  padding: var(--space-2xl) 0;
+  padding: clamp(44px, 8vw, 96px) 0;
 }
 
 /* ── Buttons ── */
