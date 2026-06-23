@@ -214,6 +214,16 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1353466486760514');
 fbq('track', 'PageView');
+
+// Global WhatsApp Click Tracker for all 9 buttons
+document.addEventListener('click', function(event) {
+    var link = event.target.closest('a');
+    if (link && (link.href.includes('wa.me') || link.href.includes('whatsapp.com'))) {
+        fbq('track', 'Lead', {
+            content_name: 'WhatsApp Rental Inquiry'
+        });
+    }
+});
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1353466486760514&ev=PageView&noscript=1"
