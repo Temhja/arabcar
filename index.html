@@ -203,6 +203,7 @@
   <link rel="stylesheet" href="css/rtl.css" />
 
   <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -211,26 +212,29 @@ if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+'https://connect.facebook.net/en_US/fevents.js');
 fbq('init', '1353466486760514');
 fbq('track', 'PageView');
 
-// Global WhatsApp Click Tracker for all 9 buttons
+// Global WhatsApp Click Tracker with Advanced Parameters
 document.addEventListener('click', function(event) {
     var link = event.target.closest('a');
     if (link && (link.href.includes('wa.me') || link.href.includes('whatsapp.com'))) {
         
-        // Dynamically get the page title (e.g., "Rent Mercedes G-Class | ArabCar")
+        // Dynamically captures the page/car title
         var carModel = document.title; 
         
         fbq('track', 'Lead', {
             content_name: 'WhatsApp Rental Inquiry',
             content_category: 'Luxury Car Rental',
-            predicted_availability: carModel // This sends the exact car name to Meta!
+            predicted_availability: carModel,
+            value: 1.00,
+            currency: 'USD'
         });
     }
 });
 </script>
+<!-- End Meta Pixel Code -->
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1353466486760514&ev=PageView&noscript=1"
 /></noscript>
