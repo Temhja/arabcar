@@ -219,8 +219,14 @@ fbq('track', 'PageView');
 document.addEventListener('click', function(event) {
     var link = event.target.closest('a');
     if (link && (link.href.includes('wa.me') || link.href.includes('whatsapp.com'))) {
+        
+        // Dynamically get the page title (e.g., "Rent Mercedes G-Class | ArabCar")
+        var carModel = document.title; 
+        
         fbq('track', 'Lead', {
-            content_name: 'WhatsApp Rental Inquiry'
+            content_name: 'WhatsApp Rental Inquiry',
+            content_category: 'Luxury Car Rental',
+            predicted_availability: carModel // This sends the exact car name to Meta!
         });
     }
 });
