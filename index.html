@@ -223,6 +223,19 @@ function trackWhatsAppClick() {
         });
     }
 }
+fbq('init', '1353466486760514');
+fbq('track', 'PageView');
+
+// Dedicated function to fire Lead when a WhatsApp button is clicked
+function trackWhatsAppClick() {
+    if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', {
+            content_name: 'WhatsApp Rental Inquiry',
+            value: 1.00,
+            currency: 'USD'
+        });
+    }
+}
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1353466486760514&ev=PageView&noscript=1"
