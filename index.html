@@ -202,6 +202,7 @@
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="css/rtl.css" />
 
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -213,10 +214,20 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1353466486760514');
 fbq('track', 'PageView');
+
+// Dedicated function to fire Lead when a WhatsApp button is clicked
+function trackWhatsAppClick() {
+    if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', {
+            content_name: 'WhatsApp Rental Inquiry'
+        });
+    }
+}
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1353466486760514&ev=PageView&noscript=1"
 /></noscript>
+<!-- End Meta Pixel Code -->
 
 </head>
 <body class="lang-en" data-lang="en">
