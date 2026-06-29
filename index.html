@@ -220,13 +220,12 @@ document.addEventListener('click', function(event) {
     var link = event.target.closest('a');
     if (link && (link.href.includes('wa.me') || link.href.includes('whatsapp.com'))) {
         fbq('track', 'Lead', {
-            content_name: 'WhatsApp Rental Inquiry',
-            value: 1.00,
-            currency: 'USD'
+            content_name: 'WhatsApp Rental Inquiry'
         });
     }
 });
 </script>
+<!-- End Meta Pixel Code -->
 <!-- End Meta Pixel Code -->
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1353466486760514&ev=PageView&noscript=1"
